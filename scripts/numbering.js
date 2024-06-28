@@ -29,7 +29,7 @@ function label(counter, labelName, locale, options) {
 	if (options !== undefined)
 		counterStyles[counter] = {options: options};
 
-	document.write("<span id='numbering-" + labelName + "'>" + new Number(counters[counter]).toLocaleString(counterStyles[counter].locale, counterStyles[counter].options) + "</span>");
+	document.write(`<span id='numbering-${labelName}' class='${counter}'>` + new Number(counters[counter]).toLocaleString(counterStyles[counter].locale, counterStyles[counter].options) + "</span>");
 	document.currentScript.remove();
 }
 
